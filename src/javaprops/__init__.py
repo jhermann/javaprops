@@ -26,11 +26,19 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 """
+__url__             = 'https://github.com/Feed-The-Web/javaprops'
 __version__         = '0.1.0'
 __license__         = 'Apache 2.0'
 __author__          = 'Jürgen Hermann'
 __author_email__    = 'jh@web.de'
 
+#from javaprops.mapper import PropertyMapper
+#from javaprops.templates import PropertyFilter, PropertyLogger
+
+
 __all__ = [
     #'',
+    #'PropertyMapper',
+    #'PropertyFilter',
+    #'PropertyLogger',
 ]
