@@ -1,0 +1,6 @@
+#
+# Tooling requirements
+#
+
+bpython==0.13.2
+yolk==0.4.3

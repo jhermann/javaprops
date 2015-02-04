@@ -2,4 +2,4 @@
 # Install requirements
 #
 
-click
+click>=3.3,<4
