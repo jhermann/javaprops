@@ -37,6 +37,10 @@ like Unicode escaping. What sets it apart from similar projects are these requir
 **TODO**
 
 
+## `javaprops` command line tool
+**TODO**
+
+
 ## Similar Projects
 
 * [jprops](https://github.com/mgood/jprops)
