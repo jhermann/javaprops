@@ -80,6 +80,11 @@ def _build_metadata():
         setup_requires = requires['setup'],
         tests_require =  requires['test'],
         classifiers = classifiers,
+        entry_points = dict(
+            console_scripts = [
+                'javaprops = javaprops.__main__:run',
+            ],
+        ),
     ))
     return metadata
 
