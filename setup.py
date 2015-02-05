@@ -82,7 +82,7 @@ def _build_metadata():
         classifiers = classifiers,
         entry_points = dict(
             console_scripts = [
-                'javaprops = javaprops.__main__:run',
+                'javaprops = javaprops.__main__:cli',
             ],
         ),
     ))
