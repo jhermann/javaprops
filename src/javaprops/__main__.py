@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """ Command line interface.
 """
-import sys
-
 import click
 
 CONTEXT_SETTINGS = dict(
@@ -24,7 +22,7 @@ def cli(quiet=False, verbose=False):
 def normalize(file_or_url, output=None):
     """Load properties and write a normalized, deduplicated, include-free copy."""
     click.echo('normalize - not implemented! args={0}'.format((output, file_or_url)))
-    output = output or sys.stdout
+    output = output or click.get_text_stream('stdout')
 
 
 if __name__ == "__main__": # imported via "python -m"?
