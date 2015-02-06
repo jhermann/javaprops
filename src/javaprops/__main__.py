@@ -5,8 +5,12 @@ import sys
 
 import click
 
+CONTEXT_SETTINGS = dict(
+    help_option_names = ['-h', '--help'],
+)
 
-@click.group()
+
+@click.group(context_settings=CONTEXT_SETTINGS)
 @click.option('-q', '--quiet', is_flag=True, default=False, help='Be quiet (show only errors).')
 @click.option('-v', '--verbose', is_flag=True, default=False, help='Create extra verbose output.')
 def cli(quiet=False, verbose=False):
