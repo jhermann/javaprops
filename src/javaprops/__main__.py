@@ -3,6 +3,7 @@
 """
 import click
 
+APP_NAME = 'javaprops'
 CONTEXT_SETTINGS = dict(
     help_option_names = ['-h', '--help'],
 )
@@ -13,6 +14,8 @@ CONTEXT_SETTINGS = dict(
 @click.option('-v', '--verbose', is_flag=True, default=False, help='Create extra verbose output.')
 def cli(quiet=False, verbose=False):
     """Parse and work with Java property files."""
+    appdir = click.get_app_dir(APP_NAME)
+    #click.secho('appdir = {0}'.format(appdir), fg='yellow')
 
 
 @cli.command()
