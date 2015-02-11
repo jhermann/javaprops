@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# pylint: disable=bad-continuation
 """ Command line interface.
 """
 # Copyright ⓒ  2015 1&1 Group
@@ -19,14 +20,14 @@ import click
 
 APP_NAME = 'javaprops'
 CONTEXT_SETTINGS = dict(
-    help_option_names = ['-h', '--help'],
+    help_option_names=['-h', '--help'],
 )
 
 
 @click.group(context_settings=CONTEXT_SETTINGS)
 @click.option('-q', '--quiet', is_flag=True, default=False, help='Be quiet (show only errors).')
 @click.option('-v', '--verbose', is_flag=True, default=False, help='Create extra verbose output.')
-def cli(quiet=False, verbose=False):
+def cli(quiet=False, verbose=False): # pylint: disable=unused-argument
     """Parse and work with Java property files."""
     appdir = click.get_app_dir(APP_NAME)
     #click.secho('appdir = {0}'.format(appdir), fg='yellow')

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# pylint: disable=bad-whitespace
 """ javaprops - Read and write Java property files.
 
     This libary allows you to read Java property files including all the
