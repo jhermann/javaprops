@@ -1,6 +1,7 @@
 # “javaprops” Python Package
 
 ![logo](https://raw.githubusercontent.com/Feed-The-Web/javaprops/master/static/img/javaprops-128.png)
+
 Read and write Java property files, including comments and location info.
 
 ![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
