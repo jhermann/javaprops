@@ -9,7 +9,7 @@ Read and write Java property files, including comments and location info.
 
 ## Project Goals
 
-This libary allows you to read Java property files including all the lesser known formatting details,
+This library allows you to read Java property files including all the lesser known formatting details,
 like Unicode escaping. What sets it apart from similar projects are these requirements:
 
 * Modification of property files with minimal differences due to normalization.
