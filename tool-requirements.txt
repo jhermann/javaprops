@@ -3,5 +3,6 @@
 #
 
 invoke==0.9.0
+pylint==1.4.1
 bpython==0.13.2
 yolk==0.4.3
