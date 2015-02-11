@@ -2,5 +2,6 @@
 # Tooling requirements
 #
 
+invoke==0.9.0
 bpython==0.13.2
 yolk==0.4.3
