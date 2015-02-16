@@ -16,8 +16,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import logging
+
 import pytest
 
 
 # Globally available fixtures
-
+@pytest.fixture
+def logger():
+    """Test logger instance as a fixture."""
+    logging.basicConfig(level=logging.DEBUG)
+    return logging.getLogger('tests')
