@@ -23,7 +23,7 @@ import pytest
 
 # Globally available fixtures
 @pytest.fixture
-def logger():
+def logger(scope='session'):
     """Test logger instance as a fixture."""
     logging.basicConfig(level=logging.DEBUG)
     return logging.getLogger('tests')
