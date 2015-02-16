@@ -8,4 +8,7 @@ pylint==1.4.1
 bpython==0.13.2
 yolk==0.4.3
 
+pytest==2.6.4
+tox==1.8.1
+
 -e .
