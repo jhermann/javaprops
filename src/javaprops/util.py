@@ -20,7 +20,7 @@ import os
 import sys
 from collections import namedtuple
 
-termsize = namedtuple("termsize", ("rows", "cols", "x_pixels", "y_pixels"))
+termsize = namedtuple("termsize", ("rows", "cols", "x_pixels", "y_pixels")) # pylint: disable=invalid-name
 
 
 def get_termsize():
@@ -38,7 +38,7 @@ def get_termsize():
         import termios, fcntl, struct # import here, when system is POSIX
 
         sizes = struct.pack("HHHH", 0, 0, 0, 0)
-        sizes =  fcntl.ioctl(fd_stdout, termios.TIOCGWINSZ, sizes) #@UndefinedVariable
+        sizes = fcntl.ioctl(fd_stdout, termios.TIOCGWINSZ, sizes) #@UndefinedVariable
 
         return termsize(*struct.unpack("HHHH", sizes))
     except (AttributeError, EnvironmentError):
