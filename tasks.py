@@ -46,6 +46,12 @@ def build(docs=False):
 
 
 @task
+def test():
+    """Perform standard unittests."""
+    run('python setup.py test')
+
+
+@task
 def check():
     """Perform source code checks."""
     run('pylint "{0}"'.format(srcfile('src', project['name'])))
