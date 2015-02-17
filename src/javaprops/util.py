@@ -23,6 +23,47 @@ from collections import namedtuple
 termsize = namedtuple("termsize", ("rows", "cols", "x_pixels", "y_pixels")) # pylint: disable=invalid-name
 
 
+class LoggableError(RuntimeError):
+    """Errors that should be presented to a human."""
+
+
+def to_str(val):
+    """ Convert a property value to a text string, if it isn't already.
+        Used when dumping property values to console or streams.
+    """
+    return val if isinstance(val, basestring) else str(val)
+
+
+def escaped(text, docstr=False):
+    """ Handle essential subset of Java property file escaping.
+
+        @param text: Unescaped text.
+        @param docstr: Is `text` a comment?
+        @return: Escaped text.
+    """
+    if not docstr:
+        text = (text
+            .replace('\\', r'\\')
+            .replace(':', r'\:')
+            .replace('=', r'\=')
+            .replace('#', r'\#')
+            .replace('\r', r'\r')
+            .replace('\n', r'\n')
+        )
+
+    if text.startswith(' ') or text.endswith(' '):
+        text = text.replace(' ', "\\u0020")
+
+    # Handle unicode data, without wasting time on pure ASCII
+    if isinstance(text, unicode):
+        try:
+            text = text.encode("ascii")
+        except UnicodeError:
+            text = u''.join([r"\u%04x" % ord(i) if ord(i) > 255 else i for i in text]).encode('iso-8859-1')
+
+    return text
+
+
 def get_termsize():
     """ Return a termsize tuple, with 0 for unknown values.
     """
