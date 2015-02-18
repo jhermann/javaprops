@@ -24,9 +24,9 @@ like Unicode escaping. What sets it apart from similar projects are these requir
 To create a development environment, use these commands:
 
 ```sh
-git clone https://github.com/Feed-The-Web/javaprops.git
+git clone "https://github.com/Feed-The-Web/javaprops.git"
 cd javaprops; deactivate; /usr/bin/virtualenv .; . ./bin/activate
-./bin/pip install -U pip; ./bin/pip install -r dev-requirements.txt
+./bin/pip install -U pip; ./bin/pip install -r "dev-requirements.txt"
 invoke build --docs
 ```
 
