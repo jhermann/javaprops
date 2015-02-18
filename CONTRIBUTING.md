@@ -29,7 +29,7 @@ Small fixes for typos and the like are a matter of minutes when using that tool.
 Here's a quick guide to improve the code:
 
 1. Fork the repo, and clone the fork to your machine.
-1. Add your improvements, the technical details are futher below.
+1. Add your improvements, the technical details are further below.
 1. Run the tests and make sure they're passing (`invoke test`).
 1. Check for violations of code conventions (`invoke check`).
 1. Make sure the documentation builds without errors (`invoke build --docs`).
