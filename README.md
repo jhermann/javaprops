@@ -55,6 +55,7 @@ invoke build --docs
 * [jprops](https://github.com/mgood/jprops)
 * [java-props-in-python](https://github.com/hackorama/java-props-in-python)
 * [pyjavaproperties](https://bitbucket.org/jnoller/pyjavaproperties/)
+* [PyHOCON](https://github.com/chimpler/pyhocon)
 
 
 ## Contributing
