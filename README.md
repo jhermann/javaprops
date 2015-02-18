@@ -30,6 +30,9 @@ cd javaprops; deactivate; /usr/bin/virtualenv .; . ./bin/activate
 invoke build --docs
 ```
 
+See [CONTRIBUTING.md](https://github.com/Feed-The-Web/javaprops/blob/master/CONTRIBUTING.md)
+for details on how to give back your improvements and fixes to upstream, so every user can benefit from them.
+
 
 ## Usage
 
@@ -56,10 +59,6 @@ invoke build --docs
 * [java-props-in-python](https://github.com/hackorama/java-props-in-python)
 * [pyjavaproperties](https://bitbucket.org/jnoller/pyjavaproperties/)
 * [PyHOCON](https://github.com/chimpler/pyhocon)
-
-
-## Contributing
-**TODO**
 
 
 ## Acknowledgements
