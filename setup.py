@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
+# pylint: disable=bad-whitespace, attribute-defined-outside-init, invalid-name
 """ javaprops - Read and write Java property files.
 
     Copyright ⓒ  2015 1&1 Group
@@ -38,6 +39,7 @@ def srcfile(*args):
     return os.path.join(*((project_root,) + args))
 
 class PyTest(TestCommand):
+    """pytest integration into setuptool's `test` command."""
     user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
 
     def initialize_options(self):
