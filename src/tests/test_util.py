@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# pylint: disable=
+# pylint: disable=missing-docstring, no-self-use
 """ Tests for `javaprops.util`.
 """
 # Copyright ⓒ  2015 1&1 Group
@@ -68,12 +68,12 @@ class EscapedTests(unittest.TestCase):
 class GetTermsizeTests(unittest.TestCase):
 
     def test_named_tuple(self):
-        ts = util.get_termsize()
-        assert len(ts) == 4
-        assert type(ts.rows) is int
-        assert type(ts.cols) is int
-        assert type(ts.x_pixels) is int
-        assert type(ts.y_pixels) is int
+        tsz = util.get_termsize()
+        assert len(tsz) == 4
+        assert type(tsz.rows) is int
+        assert type(tsz.cols) is int
+        assert type(tsz.x_pixels) is int
+        assert type(tsz.y_pixels) is int
 
     def test_non_posix(self):
         if os.name != "posix":
@@ -85,11 +85,11 @@ class GetTermsizeTests(unittest.TestCase):
         sys_stdout = sys.stdout
         try:
             sys.stdout = open("/dev/tty", "wb")
-            ts = util.get_termsize()
-            assert ts.rows >= 1
-            assert ts.cols >= 40
+            tsz = util.get_termsize()
+            assert tsz.rows >= 1
+            assert tsz.cols >= 40
         finally:
-           sys.stdout = sys_stdout
+            sys.stdout = sys_stdout
 
     def test_posix_non_tty(self):
         if os.name != "posix":
@@ -97,7 +97,6 @@ class GetTermsizeTests(unittest.TestCase):
         sys_stdout = sys.stdout
         try:
             sys.stdout = open("/dev/null", "wb")
-            ts = util.get_termsize()
             assert util.get_termsize() == util.termsize(0, 0, 0, 0)
         finally:
-           sys.stdout = sys_stdout
+            sys.stdout = sys_stdout
