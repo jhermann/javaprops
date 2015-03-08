@@ -18,7 +18,7 @@
 
 import click
 
-APP_NAME = 'javaprops'
+__app_name__ = 'javaprops'
 CONTEXT_SETTINGS = dict(
     help_option_names=['-h', '--help'],
 )
@@ -29,7 +29,7 @@ CONTEXT_SETTINGS = dict(
 @click.option('-v', '--verbose', is_flag=True, default=False, help='Create extra verbose output.')
 def cli(quiet=False, verbose=False): # pylint: disable=unused-argument
     """Parse and work with Java property files."""
-    appdir = click.get_app_dir(APP_NAME)
+    appdir = click.get_app_dir(__app_name__)
     #click.secho('appdir = {0}'.format(appdir), fg='yellow')
 
 
@@ -45,4 +45,3 @@ def normalize(file_or_url, output=None):
 
 if __name__ == "__main__": # imported via "python -m"?
     cli()
-
