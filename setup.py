@@ -34,7 +34,7 @@ import re
 import sys
 
 # Project data (the rest is parsed from __init__.py and other project files)
-name = 'javaprops'
+name = __doc__.strip().split(None, 1)[0]
 
 # Import setuptools
 try:
