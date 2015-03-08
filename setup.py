@@ -40,7 +40,7 @@ name = 'javaprops'
 try:
     from setuptools import setup, find_packages
     from setuptools.command.test import test as TestCommand
-except ImportError, exc:
+except ImportError as exc:
     raise RuntimeError("Cannot install '{0}', setuptools is missing ({1})".format(name, exc))
 
 # Helpers
