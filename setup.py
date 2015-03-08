@@ -3,6 +3,18 @@
 # pylint: disable=bad-whitespace, attribute-defined-outside-init, invalid-name
 """ javaprops - Read and write Java property files.
 
+    This setuptools script follows the DRY principle and tries to
+    minimize repetition of project metadata by loading it from other
+    places (like the package's `__init__.py`). Incidently, this makes
+    the script almost identical between different projects.
+
+    It is also importable (by using the usual `if __name__ == '__main__'`
+    idiom), and exposes the project's setup data in a `project` dict.
+    This allows other tools to exploit the data assembling code contained
+    in here, and again supports the DRY principle. The `rituals` package
+    uses that to provide Invoke tasks that work for any project, based on
+    its project metadata.
+
     Copyright ⓒ  2015 1&1 Group
 
     Licensed under the Apache License, Version 2.0 (the "License");
