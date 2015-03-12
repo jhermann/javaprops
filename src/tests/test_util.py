@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# pylint: disable=missing-docstring, no-self-use
+# pylint: disable=missing-docstring, no-self-use, unidiomatic-typecheck
 """ Tests for `javaprops.util`.
 """
 # Copyright ⓒ  2015 1&1 Group
