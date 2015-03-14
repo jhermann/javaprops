@@ -5,6 +5,7 @@
 Read and write Java property files, including comments and location info.
 
 ![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
+[![Travis CI](https://api.travis-ci.org/Feed-The-Web/javaprops.svg)](https://travis-ci.org/Feed-The-Web/javaprops)
 
 
 ## Project Goals
