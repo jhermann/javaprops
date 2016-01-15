@@ -58,10 +58,16 @@ for details on how to give back your improvements and fixes to upstream, so ever
 
 ## Similar Projects
 
+**Python**
+
 * [jprops](https://github.com/mgood/jprops)
 * [java-props-in-python](https://github.com/hackorama/java-props-in-python)
 * [pyjavaproperties](https://bitbucket.org/jnoller/pyjavaproperties/)
 * [PyHOCON](https://github.com/chimpler/pyhocon)
+
+**Go**
+
+* [magiconair/properties](https://github.com/magiconair/properties)
 
 
 ## Acknowledgements
